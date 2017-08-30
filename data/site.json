@@ -1,0 +1,4 @@
+{
+ "title":    "Static site demo using Metalsmith + Nunjucks",
+ "base_url": "/"
+}

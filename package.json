@@ -1,0 +1,45 @@
+{
+  "name": "demo-metalsmith-nunjucks",
+  "description": "Static site demo using Metalsmith + Nunjucks",
+  "private": true,
+  "version": "1.0.0",
+  "main": "build.js",
+  "scripts": {
+    "build": "run-s build:app build:now",
+    "build:app": "node ./build.js",
+    "build:now": "node scripts/build-now-config.js",
+    "predeploy": "npm run build",
+    "deploy": "run-s deploy:now deploy:alias",
+    "deploy:now": "now build/ --public",
+    "deploy:alias": "cd build/ && now alias",
+    "start": "http-server 'build/' -c-1 -o -p 63825",
+    "watch": "chokidar 'build.js' 'data/**' 'lib/**' 'src/**' --command 'node ./build.js'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "2.1.0",
+    "chokidar-cli": "1.2.0",
+    "http-server": "0.10.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "0.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-in-place": "^1.4.3",
+    "metalsmith-layouts": "^1.5.4",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-permalinks": "^0.5.0",
+    "now": "7.4.0",
+    "npm-run-all": "4.1.1",
+    "nunjucks": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voorhoede/demo-metalsmith-nunjucks.git"
+  },
+  "author": "Jasper Moelker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voorhoede/demo-metalsmith-nunjucks/issues"
+  },
+  "homepage": "https://github.com/voorhoede/demo-metalsmith-nunjucks#readme"
+}

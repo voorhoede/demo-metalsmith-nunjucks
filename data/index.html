@@ -1,0 +1,17 @@
+---
+layout: page.html
+title: Static site demo using Metalsmith + Nunjucks
+permalink: false
+---
+
+<section>
+  <h2>Example content</h2>
+  <p>Content borrowed from <a href="https://github.com/voorhoede/interview-exercise" target="_blank" rel="noopener">Interview exercise</a>.</p>
+  <ul>
+      {% for post in posts %}
+          <li><a href="{{ post.path }}">{{ post.title }}</a></li>
+      {% endfor %}
+  </ul>
+  <p>Layout borrowed from <a href="https://voorhoede.github.io/voorhoede-ocelot-formatter/" target="_blank" rel="noopener">Voorhoede Ocelot Formatter</a>.</p>
+</section> 
+

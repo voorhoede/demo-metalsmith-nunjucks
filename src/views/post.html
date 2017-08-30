@@ -1,0 +1,30 @@
+{% extends "views/default.html" %}
+{% from "components/page-header.html" import pageHeader %}
+
+{% block body %}
+{{ pageHeader(
+    title = title,
+    subtitle = 'by ' + author + ' on ' + date
+) }}
+
+<a href="{{ site.base_url }}">⬅ Home</a>
+
+<div class="section">
+
+  <div class="side-content">
+    <nav class="toc">
+      <h2>Table of contents</h2>
+      <ul>
+        <li>(todo)</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="page-content">
+    <section>
+      {{ contents | safe }}
+    </section>
+  </div>
+
+</div>
+{% endblock %}
