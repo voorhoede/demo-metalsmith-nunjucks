@@ -4,7 +4,7 @@
 {% block body %}
 {{ pageHeader(
     title = title,
-    subtitle = 'by ' + author + ' on ' + date
+    subtitle = 'by ' + author + ' on ' + date | formatDate('D MMMM YYYY')
 ) }}
 
 <a href="{{ site.base_url }}">⬅ Home</a>
