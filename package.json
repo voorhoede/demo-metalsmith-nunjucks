@@ -23,14 +23,14 @@
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "0.1.0",
     "metalsmith-collections": "^0.9.0",
-    "metalsmith-in-place": "^1.4.3",
-    "metalsmith-layouts": "^1.8.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metadata": "0.0.4",
     "metalsmith-permalinks": "^0.5.0",
+    "multimatch": "2.1.0",
     "now": "7.4.0",
     "npm-run-all": "4.1.1",
-    "nunjucks": "^3.0.1"
+    "nunjucks": "^3.0.1",
+    "nunjucks-date-filter": "0.1.1"
   },
   "repository": {
     "type": "git",
